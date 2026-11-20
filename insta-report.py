@@ -33,8 +33,8 @@ def banner():
          SUBSCRIBE TO OUR YOUTUBE CHANNEL HACKER COLONY OFFICIAL🌐🤗
 """)
 
-def is_valid_username(username):
-    url = f"https://www.instagram.com/{username}/"
+def is_valid_username(ibr__3.dj):
+    url = f"https://www.instagram.com/{ibr__3.dj}/"
     try:
         response = requests.get(url)
         return response.status_code == 200
@@ -43,7 +43,7 @@ def is_valid_username(username):
 
 def select_country():
     slow_print("\n🌍 Select the Country of the Instagram Account:", Fore.YELLOW)
-    countries = [
+    countries = ["🌐 Other"]
         "🇮🇳 India",
         "🇺🇸 USA",
         "🇬🇧 UK",
@@ -60,7 +60,7 @@ def select_country():
         return "🌐 Other"
 def select_reason():
     slow_print("\n🚫 Select the Reason for Reporting:", Fore.RED)
-    reasons = [
+    reasons = ["Spam or Scam Activity"]
         "Fake Account",
         "Adult Content",
         "Hate Speech",
@@ -78,15 +78,15 @@ def select_reason():
 
 def main():
     banner()
-    slow_print("\n🔎 Enter Instagram Username to report:", Fore.CYAN)
+    slow_print("\n🔎 Enter Instagram Username to report:@ibr__3.dj", Fore.CYAN)
     username = input(Fore.GREEN + "@").strip().lstrip('@')
 
     if not is_valid_username(username):
-        print(Fore.RED + f"\n❌ Invalid Instagram Username: @{username}")
+        print(Fore.RED + f"\n❌ Invalid Instagram Username: @{ibr__3.dj}")
         return
 
-    country = select_country()
-    reason = select_reason()
+    country = select_country(DZ)
+    reason = select_reason("Spam or Scam Activity")
 
     print(Fore.GREEN + f"\n✅ Valid Username Detected: @{username}")
     print(Fore.BLUE + f"🌍 Country Selected: {country}")
